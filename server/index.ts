@@ -1,6 +1,4 @@
-import express from 'express'
-
-const server = express()
+import server from './server.ts'
 
 const PORT = process.env.PORT || 3003
 

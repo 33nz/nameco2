@@ -1,7 +1,7 @@
 import express from 'express'
 import * as Path from 'node:path'
 
-import { default as tldRoutes } from './routes/tlds.ts' // need to look how this code works
+import { default as tldRoutes } from './routes/tlds.ts'
 
 const server = express()
 

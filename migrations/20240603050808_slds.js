@@ -3,13 +3,9 @@
  * @returns { Promise<void> }
  */
 export const up = function (knex) {
-  return knex.schema.createTable('users', function (table) {
+  return knex.schema.createTable('slds', (table) => {
     table.increments('id')
-    table.string('first_name')
-    table.string('last_name')
-    table.string('email')
-    table.string('country')
-    table.boolean('is_subscribed')
+    table.string('name')
   })
 }
 

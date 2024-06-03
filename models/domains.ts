@@ -8,10 +8,12 @@ export interface Sld {
   name: string
 }
 
-export interface Domain {
+export interface Fqdn {
   id: number
   sld: string
   tld: string
   mintDate: Date
   renewalDate: Date
 }
+
+// FQDN (Fully Qualified Domain Name) = SLD +TLD
