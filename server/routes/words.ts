@@ -5,9 +5,10 @@ const router = Router()
 
 router.get('/', async (req, res) => {
   try {
+    const { entry } = req.query
     const result = await request
       .get('https://twinword-word-associations-v1.p.rapidapi.com/associations/')
-      .query({ entry: 'sound' })
+      .query({ entry })
       .set(
         'X-RapidAPI-Key',
         '3ca90152f0msha86109f176538a4p169f93jsn2e857e825d33'
