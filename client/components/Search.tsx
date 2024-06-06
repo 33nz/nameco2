@@ -1,31 +1,33 @@
 import { useState } from 'react'
 import request from 'superagent'
+import { useQuery } from '@tanstack/react-query'
+import { getWords } from '../apis/associations'
 
 function Search() {
-  const [searchTerm, setSearchTerm] = useState('')
+  const [searchTerm, setSearchTerm] = useState('Domains')
   const [associations, setAssociations] = useState([])
+
+  const {
+    data: search,
+    isPending,
+    isError,
+    refetch,
+  } = useQuery({
+    queryKey: ['search'],
+    queryFn: () => getWords(searchTerm),
+    //enabled: false, :this stops the query from running when rendering
+  })
+  if (isError) {
+    return <p>Error...</p>
+  }
+
+  if (isPending) {
+    return <p>Loading...</p>
+  }
 
   const handleSubmit = async (event: { preventDefault: () => void }) => {
     event.preventDefault()
-    try {
-      const response = await request
-        .get('http://localhost:3000/api/v1/associations')
-        .query({ entry: searchTerm })
-        .set(
-          'X-RapidAPI-Key',
-          '3ca90152f0msha86109f176538a4p169f93jsn2e857e825d33'
-        )
-        .set('X-RapidAPI-Host', 'twinword-word-associations-v1.p.rapidapi.com')
-      console.log('Response:', response)
-      const data = response.body
-      if (data) {
-        setAssociations(data.associations_array)
-      } else {
-        console.log('No data has been returned')
-      }
-    } catch (error) {
-      console.error(error)
-    }
+    refetch()
   }
 
   return (
@@ -41,8 +43,8 @@ function Search() {
         <button type="submit">Search</button>
       </form>
       <div>
-        {associations.map((associaton, index) => (
-          <div key={index}>{associaton}</div>
+        {search.associations_array.map((result, index) => (
+          <div key={index}>{result}</div>
         ))}
       </div>
     </>

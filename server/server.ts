@@ -1,6 +1,6 @@
 import express from 'express'
 import * as Path from 'node:path'
-import associations from './routes/words.ts'
+import search from './routes/words.ts'
 // import words from './routes/words'
 
 const server = express()
@@ -8,7 +8,7 @@ const server = express()
 server.use(express.json())
 
 // server.use('/api/v1/words', words)
-server.use('/api/v1/associations', associations)
+server.use('/api/v1/search', search)
 
 if (process.env.NODE_ENV === 'production') {
   server.use(express.static(Path.resolve('public')))
