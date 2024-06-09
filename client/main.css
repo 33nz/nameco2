@@ -1,7 +1,7 @@
 body {
   font-family: 'Inter', sans-serif;
   color: #00181a;
-  background: rgb(217, 217, 217);
+  background-image: url('/data-background.jpg');
 }
 
 nav {
@@ -9,9 +9,7 @@ nav {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  background: rgb(0, 88, 90);
-
-  border: 2px solid #00181a;
+  background: #00181a;
 
   padding: 0.3rem;
   color: #dcdedd;
@@ -34,7 +32,7 @@ nav {
 
 .logo {
   max-width: 100px;
-  margin-right: 10px;
+  margin: -3px;
 }
 
 .logo-text {
@@ -134,4 +132,77 @@ nav {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.formDiv {
+  padding: 40px;
+  padding-bottom: 10px;
+  max-width: 400px;
+  margin: auto;
+  margin-top: 20px;
+  border-radius: 10px;
+  background-color: #99a2a1;
+  box-shadow: 2px 2px #00181a;
+  background-image: linear-gradient(to bottom right, #00989b, #99a2a1);
+}
+
+.formDiv label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.formDiv input,
+.formDiv select {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+
+  border-radius: 4px;
+  box-shadow: inset 2px 2px #dcdedd;
+}
+
+.buttonDiv {
+  text-align: center;
+}
+
+.formDiv button {
+  margin: 20px;
+  background-color: #00181a;
+  color: #dcdedd;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: all ease-in-out 200ms;
+}
+
+.resultDiv h2 {
+  margin-top: 0;
+}
+
+.resultsContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px;
+  padding-bottom: 10px;
+  max-width: 400px;
+  margin: auto;
+  margin-top: 20px;
+  border-radius: 10px;
+  background-color: #99a2a1;
+  box-shadow: 2px 2px #00181a;
+  background-image: linear-gradient(to bottom right, #00989b, #99a2a1);
+}
+
+.resultsDiv {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: inset 2px 2px #dcdedd;
+  width: 100%;
+}
+
+.titleDiv {
+  text-align: center;
 }

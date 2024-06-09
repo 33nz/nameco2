@@ -7,8 +7,8 @@ function App() {
       <header>
         <Link className="logo-link" to="/">
           <div className="container">
-            <img src="/Nameco-logo 2.png" alt="Nameco logo" className="logo" />
-            <h1 className="logo-text">Nameco</h1>
+            <img src="/logo.png" alt="Nameco logo" className="logo" />
+            <h1 className="logo-text">NameCo</h1>
           </div>
         </Link>
 

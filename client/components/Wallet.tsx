@@ -1,7 +1,9 @@
 function Wallet() {
   return (
     <>
-      <h1>Wallet</h1>
+      <div className="titleDiv">
+        <h1>Wallet</h1>
+      </div>
     </>
   )
 }
