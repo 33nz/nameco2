@@ -1,3 +1,137 @@
 body {
   font-family: 'Inter', sans-serif;
+  color: #00181a;
+  background: rgb(217, 217, 217);
+}
+
+nav {
+  font-family: 'Inter', sans-serif;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  background: rgb(0, 88, 90);
+
+  border: 2px solid #00181a;
+
+  padding: 0.3rem;
+  color: #dcdedd;
+  gap: 20px;
+}
+
+.link {
+  color: #dcdedd;
+  text-decoration: none;
+}
+
+.link:hover {
+  color: #00989b;
+}
+
+.logo-link {
+  color: #00181a;
+  text-decoration: none;
+}
+
+.logo {
+  max-width: 100px;
+  margin-right: 10px;
+}
+
+.logo-text {
+  font-size: 3.3rem;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+
+.banner-container {
+  display: flex;
+  flex-direction: row;
+  width: 90vw; /* 90% ov view port window */
+  margin: 40px auto 20px auto;
+  align-items: stretch;
+  border: 2px solid #00181a;
+}
+
+.hero-image {
+  display: flex;
+  align-items: stretch;
+  width: 60%;
+  margin-right: 20px;
+}
+
+.text-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1; /* takes up the remaining space */
+  padding: 10px;
+  background-color: #99a2a1;
+  color: #00181a;
+}
+
+.text-box h1 {
+  font-family: 'Inter', 'sans-serif';
+  font-size: '36px';
+  margin: 0;
+  text-align: center;
+}
+
+.partner-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 66vw;
+  margin: 50px auto;
+
+  border: solid 2px #00181a;
+}
+
+.partner-h2 {
+  width: 100%;
+  background-color: #00989b;
+  color: #dcdedd;
+  padding: 20px;
+  box-sizing: border-box;
+  margin-top: 0;
+  text-align: center;
+}
+
+.image-container {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+}
+
+.image-wrapper {
+  flex-basis: 50%;
+  margin: 20px;
+  height: 200px;
+  text-align: center;
+}
+
+.image-wrapper img {
+  width: auto;
+  height: 100%;
+  object-fit: contain;
+  max-width: 100%;
+}
+
+.image-wrapper:hover {
+  transform: scale(1.1); /* increase scale by 10% */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* add a subtle shadow */
+  cursor: pointer; /* change cursor shape to indicate clickability */
+}
+
+.question {
+  margin: 60px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
